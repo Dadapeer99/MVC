@@ -1,0 +1,19 @@
+﻿@model IEnumerable<Product>
+
+<h1>Products</h1>
+
+<a href="@Url.Action("Create")" class="btn btn-primary">New Product</a>
+
+<table class="table">
+    <tr>
+        <th>Name</th>
+        <th>Price</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.Price.ToString("C")</td>
+        </tr>
+    }
+</table>
